@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENERGI-X | Media Pembelajaran IPA Kelas VIII</title>
+<style>
+:root{--primary:#2563eb;--secondary:#7c3aed;--accent:#f59e0b;--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#64748b;--ok:#16a34a;--bad:#dc2626}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:26px 6%;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+header h1{margin:0;font-size:32px}header p{margin:7px 0 0;opacity:.9}
+nav{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}nav button{border:0;border-radius:20px;padding:9px 15px;background:#ffffff25;color:#fff;cursor:pointer;font-weight:bold}nav button:hover{background:#fff;color:#2563eb}
+main{max-width:1100px;margin:auto;padding:28px 18px}.page{display:none}.page.active{display:block}
+.hero{background:linear-gradient(135deg,#eff6ff,#f5f3ff);border-radius:24px;padding:35px;margin-bottom:22px}.hero h2{font-size:34px;margin:0 0 10px;color:#1d4ed8}.hero p{font-size:18px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 6px 20px #17203310;margin-bottom:18px}.card h3{margin-top:0;color:#1d4ed8}
+.formula{background:#eef2ff;border-left:5px solid var(--primary);padding:15px;border-radius:10px;font-size:19px;font-weight:bold;margin:12px 0}
+button.primary,.quiz button{background:var(--primary);color:#fff;border:0;padding:11px 17px;border-radius:10px;cursor:pointer;font-weight:bold}.primary:hover{filter:brightness(.92)}
+input,select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:9px;margin:6px 0 12px;font-size:15px}
+.result{padding:14px;border-radius:10px;background:#f1f5f9;margin-top:10px;min-height:25px}.success{background:#dcfce7;color:#166534}.error{background:#fee2e2;color:#991b1b}
+.quiz-question{padding:17px;background:#f8fafc;border-radius:12px;margin:15px 0}.quiz-question label{display:block;padding:8px;cursor:pointer}.score{font-size:24px;font-weight:bold;color:var(--secondary)}
+.badge{display:inline-block;background:#fef3c7;color:#92400e;padding:6px 10px;border-radius:20px;font-weight:bold}
+footer{text-align:center;padding:30px;color:var(--muted)}
+.small{color:var(--muted);font-size:14px}.step{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.num{min-width:32px;height:32px;border-radius:50%;background:var(--primary);color:#fff;text-align:center;padding-top:7px;font-weight:bold}
+@media(max-width:600px){header h1{font-size:25px}.hero h2{font-size:27px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚡ ENERGI-X</h1>
+  <p>Web Pembelajaran Interaktif IPA Kelas VIII — Usaha dan Energi</p>
+  <nav>
+    <button onclick="showPage('home')">🏠 Beranda</button>
+    <button onclick="showPage('materi')">📚 Materi</button>
+    <button onclick="showPage('kalkulator')">🧮 Kalkulator</button>
+    <button onclick="showPage('latihan')">🎯 Latihan</button>
+    <button onclick="showPage('tantangan')">🎮 Tantangan</button>
+    <button onclick="showPage('refleksi')">💡 Refleksi</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <span class="badge">IPA • Kelas VIII</span>
+    <h2>Belajar Usaha & Energi Jadi Lebih Mudah!</h2>
+    <p>ENERGI-X membantu murid memahami makna konsep, memilih rumus yang tepat, memasukkan data dengan benar, dan mengecek hasil perhitungan secara interaktif.</p>
+    <button class="primary" onclick="showPage('materi')">Mulai Belajar 🚀</button>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>📖 Pahami Konsep</h3><p>Kenali hubungan gaya, perpindahan, usaha, dan energi melalui contoh kehidupan sehari-hari.</p></div>
+    <div class="card"><h3>🧮 Hitung Otomatis</h3><p>Masukkan nilai yang diketahui dan lihat hasil perhitungan beserta satuannya.</p></div>
+    <div class="card"><h3>🎯 Uji Pemahaman</h3><p>Kerjakan latihan dan dapatkan skor secara langsung.</p></div>
+  </div>
+</section>
+
+<section id="materi" class="page">
+  <h2>📚 Materi Interaktif</h2>
+  <div class="card">
+    <h3>1. Usaha</h3>
+    <p>Dalam IPA, usaha terjadi ketika gaya menyebabkan benda mengalami perpindahan.</p>
+    <div class="formula">W = F × s</div>
+    <p><b>W</b> = usaha (Joule), <b>F</b> = gaya (Newton), <b>s</b> = perpindahan (meter).</p>
+    <p><b>Contoh:</b> Sebuah benda didorong dengan gaya 20 N sejauh 5 m.</p>
+    <p>W = 20 × 5 = <b>100 J</b>.</p>
+  </div>
+  <div class="card">
+    <h3>2. Energi Kinetik</h3>
+    <p>Energi kinetik adalah energi yang dimiliki benda karena geraknya.</p>
+    <div class="formula">Ek = ½ × m × v²</div>
+    <p><b>m</b> = massa (kg), <b>v</b> = kecepatan (m/s).</p>
+  </div>
+  <div class="card">
+    <h3>3. Energi Potensial</h3>
+    <p>Energi potensial gravitasi adalah energi yang dimiliki benda karena kedudukannya terhadap permukaan bumi.</p>
+    <div class="formula">Ep = m × g × h</div>
+    <p><b>m</b> = massa (kg), <b>g</b> = percepatan gravitasi (m/s²), <b>h</b> = ketinggian (m).</p>
+  </div>
+  <div class="card">
+    <h3>4. Tips Memilih Rumus</h3>
+    <div class="step"><span class="num">1</span><div><b>Baca soal dengan teliti.</b><br>Temukan apa yang diketahui dan ditanyakan.</div></div>
+    <div class="step"><span class="num">2</span><div><b>Tulis satuan.</b><br>Pastikan kg, m, N, dan m/s digunakan sesuai kebutuhan.</div></div>
+    <div class="step"><span class="num">3</span><div><b>Pilih rumus.</b><br>Usaha → W = F × s; energi kinetik → Ek; energi potensial → Ep.</div></div>
+    <div class="step"><span class="num">4</span><div><b>Substitusikan angka.</b><br>Masukkan angka ke posisi variabel yang tepat.</div></div>
+  </div>
+</section>
+
+<section id="kalkulator" class="page">
+  <h2>🧮 Kalkulator Energi-X</h2>
+  <div class="card">
+    <h3>Hitung Usaha</h3>
+    <label>Gaya (N)</label><input id="gaya" type="number" placeholder="Contoh: 20">
+    <label>Perpindahan (m)</label><input id="jarak" type="number" placeholder="Contoh: 5">
+    <button class="primary" onclick="hitungUsaha()">Hitung Usaha</button>
+    <div id="hasilUsaha" class="result"></div>
+  </div>
+  <div class="card">
+    <h3>Hitung Energi Kinetik</h3>
+    <label>Massa (kg)</label><input id="massaEk" type="number" placeholder="Contoh: 2">
+    <label>Kecepatan (m/s)</label><input id="kecepatan" type="number" placeholder="Contoh: 4">
+    <button class="primary" onclick="hitungEk()">Hitung Energi Kinetik</button>
+    <div id="hasilEk" class="result"></div>
+  </div>
+  <div class="card">
+    <h3>Hitung Energi Potensial</h3>
+    <label>Massa (kg)</label><input id="massaEp" type="number" placeholder="Contoh: 3">
+    <label>Ketinggian (m)</label><input id="tinggi" type="number" placeholder="Contoh: 5">
+    <label>Gravitasi (m/s²)</label><input id="gravitasi" type="number" value="10">
+    <button class="primary" onclick="hitungEp()">Hitung Energi Potensial</button>
+    <div id="hasilEp" class="result"></div>
+  </div>
+</section>
+
+<section id="latihan" class="page">
+  <h2>🎯 Latihan Soal</h2>
+  <div class="card quiz">
+    <p class="small">Pilih jawaban yang paling tepat, kemudian tekan tombol Periksa Jawaban.</p>
+    <div class="quiz-question"><b>1. Sebuah gaya 10 N memindahkan benda sejauh 4 m. Besar usaha adalah ...</b>
+      <label><input type="radio" name="q1" value="a"> A. 14 J</label><label><input type="radio" name="q1" value="b"> B. 40 J</label><label><input type="radio" name="q1" value="c"> C. 2,5 J</label><label><input type="radio" name="q1" value="d"> D. 400 J</label></div>
+    <div class="quiz-question"><b>2. Energi yang dimiliki benda karena geraknya disebut ...</b>
+      <label><input type="radio" name="q2" value="a"> A. energi panas</label><label><input type="radio" name="q2" value="b"> B. energi potensial</label><label><input type="radio" name="q2" value="c"> C. energi kinetik</label><label><input type="radio" name="q2" value="d"> D. energi kimia</label></div>
+    <div class="quiz-question"><b>3. Benda bermassa 2 kg berada pada ketinggian 5 m. Jika g = 10 m/s², energi potensialnya adalah ...</b>
+      <label><input type="radio" name="q3" value="a"> A. 10 J</label><label><input type="radio" name="q3" value="b"> B. 25 J</label><label><input type="radio" name="q3" value="c"> C. 50 J</label><label><input type="radio" name="q3" value="d"> D. 100 J</label></div>
+    <div class="quiz-question"><b>4. Satuan SI untuk usaha adalah ...</b>
+      <label><input type="radio" name="q4" value="a"> A. Newton</label><label><input type="radio" name="q4" value="b"> B. Joule</label><label><input type="radio" name="q4" value="c"> C. Watt</label><label><input type="radio" name="q4" value="d"> D. Pascal</label></div>
+    <div class="quiz-question"><b>5. Rumus energi kinetik yang benar adalah ...</b>
+      <label><input type="radio" name="q5" value="a"> A. Ek = m × g × h</label><label><input type="radio" name="q5" value="b"> B. Ek = F × s</label><label><input type="radio" name="q5" value="c"> C. Ek = ½ × m × v²</label><label><input type="radio" name="q5" value="d"> D. Ek = m × v</label></div>
+    <button class="primary" onclick="cekQuiz()">Periksa Jawaban</button>
+    <div id="score" class="result"></div>
+  </div>
+</section>
+
+<section id="tantangan" class="page">
+  <h2>🎮 Tantangan Energi-X</h2>
+  <div class="card">
+    <h3>⚡ Misi: Detektif Rumus</h3>
+    <p>Sebuah anak mendorong meja dengan gaya 30 N sehingga meja berpindah 2 m.</p>
+    <p><b>Pilih rumus yang tepat:</b></p>
+    <select id="rumusMisi"><option value="">-- Pilih --</option><option value="ek">Ek = ½ × m × v²</option><option value="w">W = F × s</option><option value="ep">Ep = m × g × h</option></select>
+    <button class="primary" onclick="cekMisi()">Cek Misi</button>
+    <div id="hasilMisi" class="result"></div>
+  </div>
+  <div class="card">
+    <h3>🏆 Tantangan Cepat</h3>
+    <p>Jika F = 50 N dan s = 3 m, berapa usaha?</p>
+    <input id="jawabCepat" type="number" placeholder="Masukkan jawaban dalam Joule">
+    <button class="primary" onclick="cekCepat()">Cek Jawaban</button>
+    <div id="hasilCepat" class="result"></div>
+  </div>
+</section>
+
+<section id="refleksi" class="page">
+  <h2>💡 Refleksi Belajar</h2>
+  <div class="card">
+    <h3>Saya sudah memahami...</h3>
+    <label><input type="checkbox"> Saya dapat menjelaskan makna usaha.</label><br><br>
+    <label><input type="checkbox"> Saya dapat memilih rumus yang sesuai.</label><br><br>
+    <label><input type="checkbox"> Saya dapat memasukkan angka ke dalam rumus.</label><br><br>
+    <label><input type="checkbox"> Saya dapat menuliskan satuan dengan benar.</label><br><br>
+    <label><input type="checkbox"> Saya dapat memeriksa kembali hasil perhitungan.</label>
+  </div>
+  <div class="card">
+    <h3>🌟 Pesan untuk Saya</h3>
+    <p>Kesalahan dalam menghitung bukan berarti gagal. Gunakan langkah: <b>Diketahui → Ditanya → Rumus → Substitusi → Hitung → Satuan → Cek</b>.</p>
+    <button class="primary" onclick="alert('Hebat! Terus berlatih dan jangan takut salah. 🚀')">Saya Siap Belajar!</button>
+  </div>
+</section>
+</main>
+<footer>ENERGI-X • Media Pembelajaran IPA Kelas VIII • Usaha dan Energi</footer>
+
+<script>
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function num(id){return parseFloat(document.getElementById(id).value)}
+function setResult(id,msg,ok){const e=document.getElementById(id);e.innerHTML=msg;e.className='result '+(ok?'success':'error')}
+function hitungUsaha(){let F=num('gaya'),s=num('jarak');if(isNaN(F)||isNaN(s)){setResult('hasilUsaha','⚠️ Lengkapi gaya dan perpindahan.',false);return}setResult('hasilUsaha',`W = F × s<br>W = ${F} × ${s}<br><b>W = ${F*s} J</b>`,true)}
+function hitungEk(){let m=num('massaEk'),v=num('kecepatan');if(isNaN(m)||isNaN(v)){setResult('hasilEk','⚠️ Lengkapi massa dan kecepatan.',false);return}let r=.5*m*v*v;setResult('hasilEk',`Ek = ½ × m × v²<br>Ek = ½ × ${m} × ${v}²<br><b>Ek = ${r} J</b>`,true)}
+function hitungEp(){let m=num('massaEp'),h=num('tinggi'),g=num('gravitasi');if(isNaN(m)||isNaN(h)||isNaN(g)){setResult('hasilEp','⚠️ Lengkapi semua data.',false);return}let r=m*g*h;setResult('hasilEp',`Ep = m × g × h<br>Ep = ${m} × ${g} × ${h}<br><b>Ep = ${r} J</b>`,true)}
+function cekQuiz(){let k={q1:'b',q2:'c',q3:'d',q4:'b',q5:'c'},s=0;for(let q in k){let x=document.querySelector(`input[name="${q}"]:checked`);if(x&&x.value===k[q])s++}document.getElementById('score').innerHTML=`🏆 Skor kamu: <b>${s}/5</b> (${s*20})`;document.getElementById('score').className='result '+(s>=4?'success':'')}
+function cekMisi(){let v=document.getElementById('rumusMisi').value;if(v==='w')setResult('hasilMisi','🎉 Benar! Karena diketahui gaya dan perpindahan, gunakan W = F × s.',true);else setResult('hasilMisi','🔎 Belum tepat. Perhatikan besaran yang diketahui: gaya dan perpindahan.',false)}
+function cekCepat(){let v=num('jawabCepat');if(v===150)setResult('hasilCepat','🎉 Tepat! W = 50 × 3 = 150 J.',true);else setResult('hasilCepat','Coba lagi. Gunakan W = F × s.',false)}
+</script>
+</body>
+</html>
